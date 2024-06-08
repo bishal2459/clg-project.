@@ -1,0 +1,68 @@
+header {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* position: fixed; */
+    /* padding: 1em 2em; */
+  }
+  
+  nav .logo {
+    font-size: 1.5em;
+    color: #333;
+    display: flex;
+  }
+ nav .logo .A2{
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 56px;
+  
+ }
+
+ nav .logo .A2 h2{
+  font-size: 40px;
+  font-weight: 900;
+  color: #152066;
+ }
+
+
+ nav .logo .A1{
+  margin-bottom: 15px;
+  margin-left: 15px;
+ }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 11px;
+    font-size: 23px;
+    font-weight: bolder;
+    margin-right: 18px;
+    
+  }
+  
+  nav ul li {
+    margin-left: 1.5em;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #152066;
+    font-weight: bold;
+  
+
+  }
+  
+   nav ul li a:hover{
+      border-bottom: 3px solid rgb(80, 126, 252);
+   }
