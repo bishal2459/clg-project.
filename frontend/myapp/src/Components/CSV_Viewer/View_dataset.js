@@ -17,7 +17,6 @@ import {
   TableHead,
   TablePagination,
   TableRow,
-  makeStyles,
   styled,
 } from "@mui/material";
 
@@ -33,20 +32,7 @@ const View_dataset = () => {
   const { state } = useLocation();
 
   const [data, setData] = useState([]);
-  // const [columns, setColumns] = useState([]);
-
-  // const handleSubmit = (e) => {
-  //       const file = e.target.files[0];
-  //   if (file) {
-  //         Papa.parse(file, {
-  //        complete: (result) => {
-  //         const parsedData = result.data;
-  //         setColumns(parsedData[0]);
-  //         setData(parsedData.slice(1));
-  //       }
-  //     });
-  //   }
-  // };
+ 
 
   const DiabetesDetails = ({ data }) => {
     const columns = React.useMemo(
@@ -80,31 +66,7 @@ const View_dataset = () => {
       setPage(0);
     };
 
-    //   const useStyles = makeStyles({
-    //     table: {
-    //       minWidth: 650,
-    //       background: "black",
-    //     },
-    //   });
-
-    //   const {
-    //     getTableProps,
-    //     getTableBodyProps,
-    //     headerGroups,
-    //     page,
-    //     nextPage,
-    //     previousPage,
-    //     canNextPage,
-    //     canPreviousPage,
-    //     pageOptions,
-    //     state: { pageIndex },
-    //     prepareRow,
-    //   } = useTable(
-    //     { columns, data, initialState: { pageIndex: 0 }, pageSize: 10 },
-    //     usePagination
-    // );
-
-    // const classes = useStyles();
+    
     return (
       <div
         style={{ width: "100%", paddingInline: "100px", marginTop: "150px" }}
@@ -159,62 +121,10 @@ const View_dataset = () => {
             </TableBody>
           </Table>
         </TableContainer>
-        <div style={{ width: "100%"  }}>
-          <TablePagination
-            rowsPerPageOptions={[10, 25, 100]}
-            component="div"
-            count={state.data.length}
-            rowsPerPage={rowsPerPage}
-            page={page}
-            onPageChange={handleChangePage}
-            onRowsPerPageChange={handleChangeRowsPerPage}
-          />
-        </div>
+        
       </div>
 
-      //     <div className="container mt-4">
-      //     {/* <input type="file" accept=".csv" onChange={handleSubmit} /> */}
-      //       <h2>Diabetes Details</h2>
-      //       <table className="table table-bordered" {...getTableProps()}>
-      //         <thead className="thead-dark">
-      //           {headerGroups.map(headerGroup => (
-      //               <tr {...headerGroup.getHeaderGroupProps()}>
-      //               {headerGroup.headers.map(column => (
-      //                   <th {...column.getHeaderProps()}>{column.render('Header')}</th>
-      //                 ))}
-      //             </tr>
-      //           ))}
-      //         </thead>
-      //         <tbody {...getTableBodyProps()}>
-      //           {page.map(row => {
-      //             prepareRow(row);
-      //             return (
-      //               <tr {...row.getRowProps()}>
-      //                 {row.cells.map(cell => (
-      //                   <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
-      //                 ))}
-      //               </tr>
-      //             );
-      //           })}
-      //         </tbody>
-      //       </table>
-
-      //       <div className="pagination">
-      //         <button onClick={() => previousPage()} disabled={!canPreviousPage}>
-      //           Previous
-      //         </button>
-      //         <span>
-      //           Page{' '}
-      //           <strong>
-      //             {pageIndex + 1} of {pageOptions.length}
-      //           </strong>
-      //         </span>
-      //         <button onClick={() => nextPage()} disabled={!canNextPage}>
-      //           Next
-      //         </button>
-      //       </div>
-      //     </div>
-      //   );
+      
     );
   };
 
