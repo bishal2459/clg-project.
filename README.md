@@ -92,12 +92,13 @@ To run the application locally, follow these steps:
 
 1. **Navigate to the project root directory**:
     ```bash
-    cd ../
+    cd backend
+    cd model
     ```
 
 2. **Start the Flask server**:
     ```bash
-    flask run
+    python app.py
     ```
 
 ### Run the Frontend
@@ -105,6 +106,7 @@ To run the application locally, follow these steps:
 1. **Navigate to the frontend directory**:
     ```bash
     cd frontend
+    cd myapp
     ```
 
 2. **Start the React application**:
