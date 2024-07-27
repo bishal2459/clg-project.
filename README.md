@@ -48,8 +48,8 @@ To get the project up and running on your local machine, follow these steps:
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/diabetes-prediction-webapp.git
-    cd diabetes-prediction-webapp
+    git clone https://github.com/bishal2459/clg-project..git
+    cd clg-project
     ```
 
 2. **Create a virtual environment**:
